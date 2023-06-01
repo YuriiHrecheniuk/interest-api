@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import type { Schema } from "mongoose";
 
 export type User = {
   name: string;

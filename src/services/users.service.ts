@@ -1,5 +1,4 @@
-import { User } from "../models";
-import { CreateUserParams } from "../types";
+import { CreateUserParams, User } from "../types";
 import { usersRepository } from "../repositories";
 
 export const getUser = async (id: string): Promise<User> => {
