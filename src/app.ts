@@ -1,7 +1,7 @@
 import express, { json } from "express";
 import { connect } from "mongoose";
 
-import { postsRouter, usersRouter } from "./routers";
+import { interestsRouter, postsRouter, usersRouter } from "./routers";
 import { logMiddleware } from "./middlewares";
 
 const app = (async () => {
@@ -14,6 +14,8 @@ const app = (async () => {
   app.use("/users", usersRouter);
 
   app.use("/posts", postsRouter);
+
+  app.use("/interests", interestsRouter);
 
   return app;
 })();
