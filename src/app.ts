@@ -1,4 +1,5 @@
 import express, { json } from "express";
+import cors from "cors";
 import { connect } from "mongoose";
 
 import { interestsRouter, postsRouter, usersRouter } from "./routers";
@@ -9,7 +10,7 @@ const app = (async () => {
 
   const app = express();
 
-  app.use(json(), logMiddleware);
+  app.use(json(), cors(), logMiddleware);
 
   app.use("/users", usersRouter);
 

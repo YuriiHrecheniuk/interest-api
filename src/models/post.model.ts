@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 import { Post } from "../types";
 
 const schema = new Schema<Post>({
-  author: Schema.Types.ObjectId,
+  author: { type: Schema.Types.ObjectId, ref: 'User' },
   text: String
 }, {
   timestamps: true
